@@ -1,93 +1,531 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Elisabeth Lauren — Full-Stack Developer</title>
+    <meta name="description" content="Elisabeth Lauren — Full-Stack Developer at the Secretariat General of the Indonesian House of Representatives. Laravel, React, Python, Unity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>document.documentElement.classList.replace('no-js','js');</script>
 </head>
 <body>
-    <!-- Sticky Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#profile-section">Profile</a></li>
-            <li><a href="#projects-section">My Projects</a></li>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow glow-1" aria-hidden="true"></div>
+    <div class="bg-glow glow-2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-mark">EL</span>
+            <span class="brand-text">Elisabeth Lauren</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#featured">Thesis</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Header Section -->
-    <header>
-        <img src="images/banner1.png" alt="Banner" class="banner">
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <div class="hero-text reveal">
+            <span class="badge"><span class="dot"></span> Full-Stack Developer @ Setjen DPR RI</span>
+            <h1>Elisabeth&nbsp;<span class="gradient-text">Lauren</span></h1>
+            <p class="hero-role" id="typed"></p>
+            <p class="hero-desc">
+                Full-Stack Developer at the Secretariat General of the Indonesian House of Representatives,
+                where I joined as an intern on the internal financial system and now build submission and
+                document workflows for the MKI division. I've shipped web, mobile, and game projects
+                since 2021 — from Laravel modules to a Unity learning game.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="PDF/Resume_Elisabeth_Lauren.pdf" class="btn btn-ghost" download>
+                    <span class="btn-icon">↓</span> Download CV
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><strong data-count="14">0</strong><span>Projects Shipped</span></div>
+                <div class="stat"><strong data-count="5">0</strong><span>Roles &amp; Internships</span></div>
+                <div class="stat"><strong>1st</strong><span>CodeExpo 2023</span></div>
+            </div>
+        </div>
+
+        <div class="hero-photo reveal">
+            <div class="photo-frame">
+                <div class="photo-ring" aria-hidden="true"></div>
+                <img src="images/FotoIjazah.png" alt="Elisabeth Lauren">
+                <div class="photo-tag"><span class="status-dot"></span> Full-Stack Developer</div>
+            </div>
+        </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="profile-section" class="about-me">
-        <div class="profile-pic">
-            <img src="images/lauren.jpg" alt="Profile Picture">
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="section-head reveal">
+            <span class="section-label">01 — About</span>
+            <h2>What I actually do</h2>
         </div>
-        <div class="description">
-            <h1>Elisabeth Lauren</h1>
-            <p>
-                I am a 5th-semester Informatics student at Multimedia Nusantara University with a strong interest in program development. 
-                I am eager to learn, adaptable, and skilled in both technical and teamwork abilities. 
-                I am now seeking an internship to further develop my skills in the IT field.
-                Feel free to explore my work below!
-            </p>
-            <div class="social-links">
-                <a href="https://github.com/elisabethL174" target="_blank"><img src="images/github.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/elisabeth-lauren-8b9363200/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                <a href="mailto:elisabeth.lauren74@gmail.com" target="_blank"><img src="images/email.png" alt="Email"></a>
-                <a href="https://wa.me/+6282124241411" target="_blank"><img src="images/wa.png" alt="WhatsApp"></a>
+        <div class="about-grid">
+            <div class="card about-card reveal">
+                <p>
+                    I'm an Informatics graduate from Universitas Multimedia Nusantara, now a Full-Stack
+                    Developer in the MKI division at the Secretariat General of the Indonesian House of
+                    Representatives (DPR RI).
+                </p>
+                <p>
+                    I joined as an intern in the Financial Bureau, working on <strong>DIGITall</strong> — the
+                    institution's internal financial system — where I built the PIPK control assessment tables
+                    and shipped the PPh 22 tax module end to end. I then moved to the MKI division, where I build
+                    the SK submission, Integrity Pact, and task management modules.
+                </p>
+                <p>
+                    Outside of work I've built pharmacy platforms, a phishing-detection model in Python,
+                    a gamified task app for kids, and an educational Unity game as my undergraduate thesis.
+                    I like problems where the interface matters as much as the logic.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/elisabethL174" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/elisabeth-lauren-8b9363200/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="mailto:lauren.elisabeth07@gmail.com" aria-label="Email"><img src="images/email.png" alt="Email"></a>
+                    <a href="https://wa.me/6282124241411" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/wa.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+            <div class="about-side">
+                <div class="card mini-card reveal">
+                    <span class="mini-icon">💼</span>
+                    <h3>Currently</h3>
+                    <p>Full-Stack Developer, MKI Division — Secretariat General of the Indonesian House of Representatives (DPR RI)</p>
+                </div>
+                <div class="card mini-card reveal">
+                    <span class="mini-icon">🎓</span>
+                    <h3>Education</h3>
+                    <p>S.Kom. in Informatics — Universitas Multimedia Nusantara, 2026</p>
+                </div>
+                <div class="card mini-card reveal">
+                    <span class="mini-icon">📍</span>
+                    <h3>Based in</h3>
+                    <p>Jakarta, Indonesia</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="projects-section" class="portfolio">
-    <h2>Portfolio Projects</h2>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <img src="images/genshinMania1.png" alt="Project 1">
-                <p>As the final project for the "Introduction to Internet" course, our team developed a Genshin Impact encyclopedia website. My contributions focused on comprehensive planning, API integration, and front-end development, and our efforts culminated in winning first place at the 2023 CodeExpo.</p>
+    <!-- Experience -->
+    <section class="section" id="experience">
+        <div class="section-head reveal">
+            <span class="section-label">02 — Experience</span>
+            <h2>Where I've worked</h2>
+        </div>
+        <div class="timeline">
+            <div class="tl-item reveal">
+                <div class="tl-marker"><span class="tl-dot current"></span></div>
+                <div class="card tl-card">
+                    <div class="tl-head">
+                        <h3>Full-Stack Developer</h3>
+                        <span class="tl-date current-date">Aug 2025 — Present</span>
+                    </div>
+                    <p class="tl-org">Secretariat General of the Indonesian House of Representatives (DPR RI)</p>
+
+                    <div class="tl-roles">
+                        <div class="tl-role active">
+                            <div class="tl-role-head">
+                                <h4>MKI Division — Full Stack Developer</h4>
+                                <span class="tl-date">Feb 2026 — Present</span>
+                            </div>
+                            <ul>
+                                <li>Develop and maintain the SK (Surat Keputusan) submission module, covering backend logic, UI/UX, and the submission workflow.</li>
+                                <li>Develop the Integrity Pact (Fakta Integritas) module to digitise the creation and management of integrity pact documents.</li>
+                                <li>Build a task management module supporting work assignment and progress tracking across teams.</li>
+                            </ul>
+                            <div class="chips small"><span>Laravel</span><span>PHP</span><span>JavaScript</span><span>UI/UX</span></div>
+                        </div>
+
+                        <div class="tl-role">
+                            <div class="tl-role-head">
+                                <h4>Financial Bureau — Web Developer Intern</h4>
+                                <span class="tl-date">Aug 2025 — Jan 2026</span>
+                            </div>
+                            <ul>
+                                <li>Designed and developed the PPh 22 LS &amp; UP module for DIGITall, the internal financial system, using Laravel.</li>
+                                <li>Developed the PIPK Table B, Table D, and Table E modules, covering backend logic, UI/UX, and integration within DIGITall.</li>
+                                <li>Redesigned the Overtime Management System and the DIGITall dashboard, improving workflow efficiency and user experience.</li>
+                            </ul>
+                            <div class="chips small"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>UI/UX</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <img src="images/HMIF.png" alt="Project 2">
-                <p>Collaborated as part of the Research and Development team to develop a web application, contributing to front-end implementation and database setup to enhance usability and establish a solid foundational structure.</p>
+
+            <div class="tl-item reveal">
+                <div class="tl-marker"><span class="tl-dot"></span></div>
+                <div class="card tl-card">
+                    <div class="tl-head">
+                        <h3>Website Designer Intern — Marketing Team</h3>
+                        <span class="tl-date">Jan 2025 — Jul 2025</span>
+                    </div>
+                    <p class="tl-org">Tahooe Pranata Indonesia</p>
+                    <ul>
+                        <li>Designed and developed website layouts in line with client requirements.</li>
+                        <li>Communicated directly with clients for feedback, revisions, and design solutions.</li>
+                        <li>Built responsive designs for optimal experience across devices while maintaining brand consistency.</li>
+                    </ul>
+                    <div class="chips small"><span>Wix</span><span>Responsive Design</span><span>Client Relations</span></div>
+                </div>
             </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-                <img src="images/sudibakti.png" alt="Project 3">
-                <p>Collaborated in a team to develop a project for Apotek Sudi Bakti, handling backend and frontend tasks, designing the database, and creating a Figma prototype. This project aimed to help customers easily view available medications, make purchases, and consult with pharmacists.</p>
+
+            <div class="tl-item reveal">
+                <div class="tl-marker"><span class="tl-dot"></span></div>
+                <div class="card tl-card">
+                    <div class="tl-head">
+                        <h3>Research &amp; Development Division Member</h3>
+                        <span class="tl-date">Nov 2022 — Nov 2023</span>
+                    </div>
+                    <p class="tl-org">Informatics Student Association (HMIF UMN)</p>
+                    <ul>
+                        <li>Contributed to the creation of HMIF UMN's first web application as part of the R&amp;D team.</li>
+                        <li>Planned and facilitated departmental events including CSS (Computer Science Shelter) and the 2023 Company Visit to Sea Labs and BSSN.</li>
+                    </ul>
+                    <div class="chips small"><span>Front-End</span><span>MySQL</span><span>Teamwork</span></div>
+                </div>
+            </div>
+
+            <div class="tl-item reveal">
+                <div class="tl-marker"><span class="tl-dot"></span></div>
+                <div class="card tl-card">
+                    <div class="tl-head">
+                        <h3>Front-End Programmer Intern</h3>
+                        <span class="tl-date">May 2021 — Jul 2021</span>
+                    </div>
+                    <p class="tl-org">Falitechno Mandiri</p>
+                    <ul>
+                        <li>Worked as a front-end developer on a hospital website, developing sections that present analysis results in a structured, readable format.</li>
+                    </ul>
+                    <div class="chips small"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </div>
             </div>
         </div>
-        <!-- Navigation Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
+    </section>
 
+    <!-- Featured: Thesis Game -->
+    <section class="section" id="featured">
+        <div class="section-head reveal">
+            <span class="section-label">03 — Undergraduate Thesis</span>
+            <h2>An educational game for early childhood</h2>
+        </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
+        <div class="featured reveal">
+            <div class="featured-info">
+                <span class="project-tag">Unity · C# · Undergraduate Thesis</span>
+                <h3>Rancang Bangun Game Edukasi Pengenalan Huruf, Angka, dan Hewan untuk Anak Usia Dini</h3>
+                <p>
+                    A learning game that teaches preschool children to recognise letters, numbers, and animals
+                    through play. Built in Unity for Android and Windows.
+                </p>
+                <p>
+                    The core design problem: children memorise <em>positions</em>, not content. If the answer is
+                    always in the same place, a child learns the pattern instead of the letter. I used the
+                    <strong>Fisher-Yates shuffle</strong> to randomise question and answer order on every run —
+                    an unbiased shuffle where every arrangement is equally likely, so no sequence can be learned
+                    by repetition. The child has to actually recognise the character to get it right.
+                </p>
+                <div class="featured-points">
+                    <div class="fp"><strong>Unbiased randomisation</strong><span>Every permutation equally likely — no learnable pattern</span></div>
+                    <div class="fp"><strong>Built for small hands</strong><span>Large touch targets, audio cues, no text instructions required</span></div>
+                    <div class="fp"><strong>Two platforms</strong><span>Android APK and Windows build from one Unity project</span></div>
+                </div>
+                <div class="featured-actions">
+                    <a href="#" class="btn btn-primary" data-placeholder="webgl"><span class="btn-icon">▶</span> Play in Browser</a>
+                    <a href="#" class="btn btn-ghost" data-placeholder="apk"><span class="btn-icon">📱</span> Download APK</a>
+                    <a href="#" class="btn btn-ghost" data-placeholder="exe"><span class="btn-icon">💻</span> Windows Build</a>
+                </div>
+                <p class="featured-note">Runs in the browser — no install needed.</p>
+            </div>
+
+            <div class="featured-visual">
+                <div class="phone">
+                    <div class="phone-notch" aria-hidden="true"></div>
+                    <div class="phone-screen" id="gameSlot">
+                        <!-- Ganti seluruh blok .game-placeholder ini dengan screenshot atau iframe itch.io -->
+                        <div class="game-placeholder">
+                            <span class="gp-icon">🎮</span>
+                            <strong>Game screenshot</strong>
+                            <span class="gp-hint">Taruh screenshot di sini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+        <div class="section-head reveal">
+            <span class="section-label">04 — Projects</span>
+            <h2>Things I've built</h2>
+            <p class="section-sub">Fourteen projects across web, mobile, games, and machine learning.</p>
+        </div>
+
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects by category">
+            <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" data-filter="web" role="tab" aria-selected="false">Web</button>
+            <button class="filter" data-filter="government" role="tab" aria-selected="false">Government</button>
+            <button class="filter" data-filter="game" role="tab" aria-selected="false">Game</button>
+            <button class="filter" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+            <button class="filter" data-filter="ml" role="tab" aria-selected="false">Machine Learning</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+            <article class="project reveal" data-cat="game">
+                <div class="project-img placeholder" data-mono="GE"><span class="ph-icon">🎮</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Undergraduate Thesis</span>
+                    <h3>Educational Game for Early Childhood</h3>
+                    <p>A Unity game teaching letters, numbers, and animals to preschoolers, using Fisher-Yates shuffle so children learn recognition instead of memorising answer positions.</p>
+                    <div class="chips small"><span>Unity</span><span>C#</span><span>Game Design</span></div>
+                    <div class="project-links"><a href="#featured">See details →</a></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="government web">
+                <div class="project-img placeholder" data-mono="PIPK"><span class="ph-icon">🏛️</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Sept 2025 — Jan 2026</span>
+                    <h3>DIGITall PIPK Table B, D &amp; E</h3>
+                    <p>Core modules for the PIPK (Pengendalian Intern atas Pelaporan Keuangan) system — Table B, D, and E. Built dynamic input forms, an evidence-upload flow, per-work-unit visibility settings, assignment features, assessment team (Tim Penilai) management, and real-time tracking logs for auditability.</p>
+                    <div class="chips small"><span>Laravel</span><span>MySQL</span><span>UI/UX</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="government web">
+                <div class="project-img placeholder" data-mono="DB"><span class="ph-icon">📊</span></div>
+                <div class="project-body">
+                    <span class="project-tag">September 2025</span>
+                    <h3>DIGITall Dashboard Redesign</h3>
+                    <p>Rebuilt the DIGITall dashboard around a modern card-based layout to strengthen visual hierarchy. Implemented responsive components and optimised data presentation for accessibility across multiple user roles.</p>
+                    <div class="chips small"><span>Laravel</span><span>Responsive UI</span><span>Accessibility</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="government web">
+                <div class="project-img placeholder" data-mono="OT"><span class="ph-icon">⏱️</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Aug — Sept 2025</span>
+                    <h3>DIGITall Overtime System</h3>
+                    <p>Redesigned the frontend of the Overtime Management System for usability and interface consistency, and integrated dynamic data retrieval from the backend for faster loading and a more intuitive workflow.</p>
+                    <div class="chips small"><span>Laravel</span><span>JavaScript</span><span>UX</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="government web">
+                <div class="project-img placeholder" data-mono="PPh"><span class="ph-icon">🧾</span></div>
+                <div class="project-body">
+                    <span class="project-tag">August 2025</span>
+                    <h3>DIGITall Income Tax 22 LS &amp; UP Module</h3>
+                    <p>Built the interface for the PPh 22 LS &amp; UP module, including table data retrieval and structured presentation, plus back-to-front data integration in Laravel for accurate and efficient tax processing.</p>
+                    <div class="chips small"><span>Laravel</span><span>MySQL</span><span>Data Integration</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="ml">
+                <div class="project-img placeholder" data-mono="PD"><span class="ph-icon">🛡️</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Feb — Jun 2025</span>
+                    <h3>Phishing Link Detection</h3>
+                    <p>A phishing URL detection system built with a team in Python, applying feature extraction and comparing Naive Bayes, Decision Tree, and AdaBoost. Ran model training and evaluation using accuracy metrics and dataset splitting.</p>
+                    <div class="chips small"><span>Python</span><span>scikit-learn</span><span>Naive Bayes</span><span>AdaBoost</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="web">
+                <div class="project-img placeholder" data-mono="GP"><span class="ph-icon">🏫</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Jan — Jun 2025</span>
+                    <h3>Genki Preschool Academy</h3>
+                    <p>Redesigned the company website to be mobile responsive and added education program details, branch locations, and an internal transaction system for better documentation and service.</p>
+                    <div class="chips small"><span>Web Design</span><span>Responsive</span><span>CMS</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="web">
+                <div class="project-img placeholder" data-mono="MS"><span class="ph-icon">🍽️</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Jan — Jun 2025</span>
+                    <h3>Marvel Sport Bar</h3>
+                    <p>An official website with automated reservation, real-time stock updates, and a visual digital menu to streamline operations and improve the customer experience.</p>
+                    <div class="chips small"><span>Web Design</span><span>Reservation System</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="web">
+                <div class="project-img placeholder" data-mono="VI"><span class="ph-icon">🏠</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Jan — Jun 2025</span>
+                    <h3>Vractal Interior</h3>
+                    <p>A company profile website with a material catalog, project documentation, and interactive 3D virtual tours that help clients express their design preferences.</p>
+                    <div class="chips small"><span>Web Design</span><span>3D Virtual Tour</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="mobile">
+                <div class="project-img placeholder" data-mono="MT"><span class="ph-icon">🐱</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Feb — May 2024</span>
+                    <h3>MeowTask Mobile App</h3>
+                    <p>A gamified task management app where children complete tasks set by parents to earn in-app currency and care for a virtual pet. I focused on UI/UX design and frontend implementation to keep it playful yet functional.</p>
+                    <div class="chips small"><span>Mobile</span><span>UI/UX</span><span>Figma</span><span>Gamification</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="web">
+                <div class="project-img">
+                    <img src="images/sudibakti.png" alt="Apotek Sudi Bakti website" loading="lazy">
+                </div>
+                <div class="project-body">
+                    <span class="project-tag">Oct — Dec 2023</span>
+                    <h3>Apotek Sudi Bakti</h3>
+                    <p>A pharmacy platform letting customers browse available medications, make purchases, and consult with pharmacists. I worked across backend and frontend, designed the database, and built the Figma prototype.</p>
+                    <div class="chips small"><span>PHP</span><span>MySQL</span><span>Figma</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="game web">
+                <div class="project-img">
+                    <img src="images/genshinMania1.png" alt="Genshin Mania encyclopedia website" loading="lazy">
+                </div>
+                <div class="project-body">
+                    <span class="project-tag">🏆 1st Place · CodeExpo 2023</span>
+                    <h3>Genshin Impact Encyclopedia</h3>
+                    <p>Final project for the Introduction to Internet course — a Genshin Impact encyclopedia website. I handled comprehensive planning, API integration, and front-end development. The project won first place at CodeExpo 2023.</p>
+                    <div class="chips small"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>REST API</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="web">
+                <div class="project-img">
+                    <img src="images/HMIF.png" alt="HMIF UMN web application" loading="lazy">
+                </div>
+                <div class="project-body">
+                    <span class="project-tag">Nov 2022 — Nov 2023</span>
+                    <h3>HMIF UMN Website</h3>
+                    <p>HMIF UMN's first web application, built with the Research and Development team. I contributed to front-end implementation and database setup, establishing a solid foundation for later development.</p>
+                    <div class="chips small"><span>Front-End</span><span>MySQL</span><span>Teamwork</span></div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="web">
+                <div class="project-img placeholder" data-mono="POS"><span class="ph-icon">🏥</span></div>
+                <div class="project-body">
+                    <span class="project-tag">Apr — Jun 2022</span>
+                    <h3>POS Application for Puskesmas Parung</h3>
+                    <p>A Point of Sale application built in Java as a final vocational school project, streamlining transactions at Puskesmas Parung and generating structured reports.</p>
+                    <div class="chips small"><span>Java</span><span>Desktop App</span><span>Reporting</span></div>
+                </div>
+            </article>
+
+        </div>
+        <p class="no-results" id="noResults" hidden>No projects in this category yet.</p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+        <div class="section-head reveal">
+            <span class="section-label">05 — Skills</span>
+            <h2>What I work with</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="card skill-card reveal">
+                <h3>Languages</h3>
+                <div class="chips"><span>PHP</span><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span><span>HTML</span><span>C#</span></div>
+            </div>
+            <div class="card skill-card reveal">
+                <h3>Frameworks</h3>
+                <div class="chips"><span>Laravel</span><span>React.js</span><span>Tailwind CSS</span></div>
+            </div>
+            <div class="card skill-card reveal">
+                <h3>Data &amp; ML</h3>
+                <div class="chips"><span>MySQL</span><span>Database Design</span><span>REST API</span><span>scikit-learn</span></div>
+            </div>
+            <div class="card skill-card reveal">
+                <h3>Tools</h3>
+                <div class="chips"><span>Figma</span><span>Canva</span><span>CapCut</span><span>Unity</span><span>Wix</span><span>Git</span></div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="card reveal">
+                <h3 class="block-title">Certifications</h3>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cred-badge">🎖️</span>
+                        <span class="cred-text"><strong>Junior Web Programmer</strong><span>BNSP · LSP Teknologi Digital</span></span>
+                        <span class="cred-year">2022</span>
+                    </li>
+                    <li>
+                        <span class="cred-badge">🤖</span>
+                        <span class="cred-text"><strong>Huawei HCIA-AI V3</strong><span>Artificial intelligence course</span></span>
+                    </li>
+                    <li>
+                        <span class="cred-badge">🐍</span>
+                        <span class="cred-text"><strong>Python Intermediate</strong><span>SoloLearn</span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <h3 class="block-title">Education</h3>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cred-badge">🎓</span>
+                        <span class="cred-text"><strong>Universitas Multimedia Nusantara</strong><span>S.Kom. in Informatics</span></span>
+                        <span class="cred-year">2022 — 2026</span>
+                    </li>
+                    <li>
+                        <span class="cred-badge">🏫</span>
+                        <span class="cred-text"><strong>Tunas Media Vocational High School</strong><span>Software Engineering</span></span>
+                        <span class="cred-year">2019 — 2022</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="card contact-card reveal">
+            <span class="section-label">06 — Contact</span>
+            <h2>Let's talk</h2>
+            <p>
+                I'm happy to hear about interesting projects, collaborations, or just to talk shop about
+                Laravel, UI design, or game development. Email and WhatsApp both reach me quickly.
+            </p>
+            <div class="contact-actions">
+                <a href="mailto:lauren.elisabeth07@gmail.com" class="btn btn-primary">lauren.elisabeth07@gmail.com</a>
+                <a href="https://wa.me/6282124241411" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+            </div>
+            <div class="social-links center">
+                <a href="https://github.com/elisabethL174" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/elisabeth-lauren-8b9363200/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="mailto:lauren.elisabeth07@gmail.com" aria-label="Email"><img src="images/email.png" alt="Email"></a>
+                <a href="https://wa.me/6282124241411" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/wa.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> Elisabeth Lauren — Full-Stack Developer, Jakarta.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
